@@ -13,8 +13,7 @@ app.engine('handlebars', exphbs());
 app.set('port', process.env.PORT || 9001);
 app.set('views', './src/views');
 app.set('view engine', 'handlebars');
-
-app.use(express.static('./dist'));
+app.use(express.static('./public'));
 
 app.get('/', (req, res) =>
   res.render('index', {
