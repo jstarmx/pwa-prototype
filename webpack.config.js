@@ -2,10 +2,14 @@ const path = require('path');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+    'sw-renderer': './src/sw-renderer.js',
+  },
   output: {
-    filename: 'index.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'public'),
+    library: 'SWRenderer',
   },
   resolve: {
     extensions: ['.js', '.jsx'],

@@ -12,6 +12,7 @@
     "serviceworker": true
   },
   "globals": {
+    "SWRenderer": true,
     "workbox": true
   },
   "parser": "babel-eslint",
