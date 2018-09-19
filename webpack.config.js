@@ -11,7 +11,10 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   module: {
-    rules: [{ test: /\.jsx?$/, exclude: /node_modules/, use: 'babel-loader' }],
+    rules: [
+      { test: /\.jsx?$/, exclude: /node_modules/, use: 'babel-loader' },
+      { test: /\.handlebars$/, loader: 'handlebars-loader' },
+    ],
   },
   plugins: [
     new WorkboxPlugin.InjectManifest({
