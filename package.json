@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Proof of concept for PWA with client-side caching",
   "scripts": {
+    "build": "rm -rf ./public && npx webpack --mode development",
+    "build:watch": "rm -rf ./public && npx webpack --mode development --watch",
     "start": "nodemon ./server.js"
   },
   "author": "James Starkie",
@@ -16,6 +18,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "copy-webpack-plugin": "^4.5.2",
     "eslint": "^5.6.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.0.1",
@@ -29,6 +32,7 @@
     "prettier": "^1.14.2",
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0",
+    "workbox-cli": "^3.6.1",
     "workbox-webpack-plugin": "^3.5.0"
   },
   "dependencies": {

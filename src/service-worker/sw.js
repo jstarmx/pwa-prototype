@@ -1,9 +1,16 @@
 importScripts(
   'https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox-sw.js',
-  'sw-renderer.js',
+  'component-renderer.js',
+  'template-renderer.js',
 );
 
-console.log(SWRenderer.default.render());
+workbox.routing.registerRoute(
+  '/',
+  workbox.streams.strategy([
+    () => TemplateRenderer.head(),
+    () => ComponentRenderer.header('SERVICE WORKER'),
+  ]),
+);
 
 workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
 

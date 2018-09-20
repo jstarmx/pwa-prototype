@@ -1,5 +1,5 @@
-const React = require('react');
-const ReactDOMServer = require('react-dom/server');
+import React from 'react';
+import ReactDOMServer from 'react-dom/server';
 
 const wrapComponent = (componentName, props, renderedMarkup) =>
   `<div data-component-name="${componentName}" data-component-props="${props}">${renderedMarkup}</div>`;

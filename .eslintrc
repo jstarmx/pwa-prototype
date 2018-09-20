@@ -12,7 +12,8 @@
     "serviceworker": true
   },
   "globals": {
-    "SWRenderer": true,
+    "ComponentRenderer": true,
+    "TemplateRenderer": true,
     "workbox": true
   },
   "parser": "babel-eslint",
